@@ -9,3 +9,7 @@ https://github.com/OutCode-Software/React-components/blob/main/layout.md
 2. Input component
 
 https://github.com/OutCode-Software/React-components/blob/main/Input.md
+
+3. Table component
+
+https://github.com/OutCode-Software/React-components/blob/main/table.md

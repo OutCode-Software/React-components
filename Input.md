@@ -20,6 +20,7 @@ In Input componet we have two type of inputs,
   name: string;
   error?: string | null;
   placeholder?: string;
+  rightIcon?:string | ReactElement;
   onChange?: () => void; //use for calling function
   value?:string,
 ```

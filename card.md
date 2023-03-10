@@ -1,4 +1,5 @@
 We have two distinct card types, alert card type and card type in card components.
+
 Alert card component
 ```
 <AlertCard image={login} date="20-02-2023" description="Lorem ipsum dolor sit amet consectetur adipisicing elit." />

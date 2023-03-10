@@ -1,4 +1,4 @@
-We have two distinct card types, alert card type and card type in card components.
+We have three distinct card types, alert card type ,icon text type and card type in card components.
 
 Alert card component
 ```
@@ -28,4 +28,16 @@ Card Component Props
     }[]
   ;
 
+```
+Icon text type
+```
+<IconText icon={login} title="Menu" onClick={onClick()} />
+```
+Icon text type Props 
+```
+    icon?:any;
+    title?:string;
+    sx?:any
+    onClick?:()=> void;
+    active?:boolean,
 ```

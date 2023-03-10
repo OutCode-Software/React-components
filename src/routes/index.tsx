@@ -3,6 +3,7 @@ import { Link, Outlet, Route, Routes } from 'react-router-dom'
 import InputField from '../components/input/inputField'
 import Layouts from '../layouts'
 import Dashboard from '../pages/dashboard'
+import Login from '../pages/login'
 interface homeProps {
     isAdmin?:boolean
      }
@@ -10,6 +11,8 @@ interface homeProps {
 const CustomRouter = () => {
   return (
     <Routes>
+       <Route path="/login" element={<Login />} />
+
         <Route path="/" element={<HomeLayout isAdmin={false}/>}>
         <Route path="/" element={<Dashboard/>} />
 

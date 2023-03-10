@@ -1,0 +1,9 @@
+.buttonOS {
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover{
+        opacity: .8;
+    }
+}

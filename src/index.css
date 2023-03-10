@@ -28,3 +28,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.buttonAXprimary{
+  background-image: linear-gradient(0deg, #203478FF, #273e9a) !important;
+
+}
+.buttonAXdanger{
+  background-image: linear-gradient(0deg, #910112, #de021c) !important;
+
+}
+.buttonAXsuccess{
+  background-image: linear-gradient(0deg, #910112, #de021c) !important;
+
+}
+.buttonAXsecondary{
+  background-image: linear-gradient(0deg, #910112, #de021c) !important;
+
+}

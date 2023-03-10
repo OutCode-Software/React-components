@@ -1,0 +1,36 @@
+.loginWrapper{
+    background-color: var(--color-background-login);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+   input{
+    color: black;
+   }
+}
+.rightWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rightContent{
+        width: 50%;
+        .logo {
+            img{
+                height: 80px;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}
+.leftWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    .leftBody{
+        img{
+            height: 500px;
+        }
+    }
+}

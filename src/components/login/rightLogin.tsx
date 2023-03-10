@@ -12,9 +12,8 @@ const LoginForm = () => {
     <>
       <InputField name="username" label="Username" type="text" />
       <InputField name="password" label="Password" type="password" />
-      <ButtonOS hasFullWidth onClick={() => route("/")}>
-        {" "}
-        Login{" "}
+      <ButtonOS hasFullWidth buttonColor="danger" onClick={() => route("/")}>
+        Login
       </ButtonOS>
     </>
   );

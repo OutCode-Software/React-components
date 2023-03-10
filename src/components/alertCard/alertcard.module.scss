@@ -1,0 +1,25 @@
+.alertCardWrapper
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        height: 120px;
+    }
+    .alertDescription{
+        background-color: var(--color-alert-red);
+        padding: 7px;
+        border-radius: 7px;
+        .p{
+            color: var(--white);
+        font-size: 16px;
+
+        }
+    }
+    .dateMessage{
+        color: var(--color-light-foreground-fade);
+        font-size: 12px;
+    }
+}

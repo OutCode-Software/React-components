@@ -15,7 +15,8 @@ interface ButtonAXProps {
 }
 
 export const ButtonOS = (props: ButtonAXProps) => {
-  const { type, children, sx, hasFullWidth, buttonColor, onClick, id } = props;
+  const { title, type, children, sx, hasFullWidth, buttonColor, onClick, id } =
+    props;
   const [btnColor, setBtnColor] = useState("");
 
   useEffect(() => {

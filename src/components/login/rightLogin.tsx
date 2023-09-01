@@ -52,7 +52,7 @@ const RightLogin = () => {
 
         {!isRegister ? (
           <p className="text-center mt-4">
-            Don't have accont?{" "}
+            {`Don't have accont?`}
             <span
               className="font-bold cursor-pointer"
               onClick={() => setRegister(true)}

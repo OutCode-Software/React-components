@@ -31,7 +31,10 @@ const CardComponent = (props: cardProps) => {
       </div>
       {description?.map((list, index) => {
         return (
-          <div className={"w-full mt-1 grid lg:grid-cols-2 grid-cols-1"}>
+          <div
+            key={index}
+            className={"w-full mt-1 grid lg:grid-cols-2 grid-cols-1"}
+          >
             <p className={"text-left leading-5"}>{list?.title}</p>
             <p className={"lg:text-right text-left leading-5"}>{list?.label}</p>
           </div>

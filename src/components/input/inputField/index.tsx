@@ -1,4 +1,6 @@
-import { useState ,ReactElement} from "react";
+import React from "react";
+
+import { useState, ReactElement } from "react";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 import style from "../input.module.scss";
 interface InputProps {
@@ -7,12 +9,12 @@ interface InputProps {
   name: string;
   error?: string | null;
   placeholder?: string;
-  rightIcon?:string | ReactElement;
-  onChange?:()=> void;
+  rightIcon?: string | ReactElement;
+  onChange?: () => void;
 }
 
 const InputField = (props: InputProps) => {
-  const {label,type,name,error,placeholder,rightIcon,onChange}=props;
+  const { label, type, name, error, placeholder, rightIcon, onChange } = props;
   const [showPassword, setShowPassword] = useState(false);
 
   const iconChange = () => {
@@ -33,11 +35,10 @@ const InputField = (props: InputProps) => {
         //     ? "password"
         //     : type === "email"
         //     ? "email"
-        //     :"text" ||  type 
+        //     :"text" ||  type
         // }
         onChange={onChange}
         type={type !== "password" ? type : showPassword ? "text" : "password"}
-
         placeholder={placeholder}
         className={`rounded-lg px-2 mt-2 w-full py-1 h-10 text-sm md:text-base ${
           error && "border-2 border-red-500"
@@ -49,22 +50,14 @@ const InputField = (props: InputProps) => {
         showPassword ? (
           <FaEyeSlash onClick={iconChange} className={style.iconEye} />
         ) : (
-      
           <FaRegEye onClick={iconChange} className={style.iconEye} />
         )
       ) : (
         ""
       )}
-      <div>
-      { rightIcon && rightIcon
-      }
-      </div>
+      <div>{rightIcon && rightIcon}</div>
 
-      {error ? (
-        <span className="text-red-500 text-xs">{error}</span>
-      ) : (
-        ""
-      )}
+      {error ? <span className="text-red-500 text-xs">{error}</span> : ""}
     </div>
   );
 };

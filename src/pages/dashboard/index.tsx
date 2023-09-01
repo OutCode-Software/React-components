@@ -30,7 +30,7 @@ const Dashboard = () => {
       <AlertCard
         image={login}
         date="20-02-2023"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        description="Test ipsum dolor sit amet consectetur adipisicing elit."
       />
       <CardComponent icon={login} title="Card component" />
 

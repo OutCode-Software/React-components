@@ -4,7 +4,6 @@ import home from "../resources/images/home.svg";
 import history from "../resources/images/history.svg";
 import sound from "../resources/images/ic-sound-on.svg";
 import baseline from "../resources/images/ic-baseline-portable-wifi-on.svg";
-import LeftSidebar from "../components/layoutComponent/layoutBody";
 import LayoutBody from "../components/layoutComponent/layoutBody";
 import logo from "../resources/images/outcode.png";
 interface HomeLayoutViewProps {

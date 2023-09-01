@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ButtonOS } from "../button";
 import InputField from "../input/inputField";
 import style from "./login.module.scss";
-import logo from "../../resources/images/outcode.png"
+import logo from "../../resources/images/outcode.png";
 
 const LoginForm = () => {
   const route = useNavigate();
@@ -18,9 +18,7 @@ const LoginForm = () => {
     </>
   );
 };
-const RegisterForm = (props:any) => {
-  const route = useNavigate();
-
+const RegisterForm = (props: any) => {
   return (
     <>
       <InputField name="username" label="Username" type="text" />
@@ -45,9 +43,12 @@ const RightLogin = () => {
       <div className={style.rightContent}>
         <div className={style.logo}>
           <img src={logo} alt="img" />
-
         </div>
-        {isRegister ? <RegisterForm setRegister={setRegister} /> : <LoginForm />}
+        {isRegister ? (
+          <RegisterForm setRegister={setRegister} />
+        ) : (
+          <LoginForm />
+        )}
 
         {!isRegister ? (
           <p className="text-center mt-4">
@@ -62,7 +63,12 @@ const RightLogin = () => {
         ) : (
           <p className="text-center mt-4">
             Already have accont?{" "}
-            <span className="font-bold cursor-pointer" onClick={() => setRegister(false)}>Sign In Now</span>
+            <span
+              className="font-bold cursor-pointer"
+              onClick={() => setRegister(false)}
+            >
+              Sign In Now
+            </span>
           </p>
         )}
       </div>

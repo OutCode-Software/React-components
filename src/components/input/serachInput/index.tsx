@@ -1,5 +1,5 @@
-import { useState, ReactElement } from "react";
-import { FaRegEye, FaEyeSlash, FaSearch } from "react-icons/fa";
+import { ReactElement } from "react";
+import { FaSearch } from "react-icons/fa";
 import style from "../input.module.scss";
 interface InputProps {
   label?: string;
@@ -9,11 +9,11 @@ interface InputProps {
   placeholder?: string;
   rightIcon?: string | ReactElement;
   onChange?: () => void;
-  value?:string,
+  value?: string;
 }
 
 const SearchInputField = (props: InputProps) => {
-  const { label, type, name, error, placeholder, rightIcon, onChange,value } = props;
+  const { label, name, error, placeholder, rightIcon, onChange, value } = props;
 
   return (
     <div className="text-left text-xs  mb-6 w-full relative">
@@ -28,7 +28,6 @@ const SearchInputField = (props: InputProps) => {
 
       <input
         name={name}
-
         value={value}
         onChange={onChange}
         type="text"

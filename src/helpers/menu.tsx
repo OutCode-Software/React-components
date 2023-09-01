@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo } from "react";
+import { ReactElement, useMemo } from "react";
 import alertIcon from "../resources/images/alert.svg";
 import mapIcon from "../resources/images/map.svg";
 
@@ -9,8 +9,6 @@ import dashboard from "../resources/images/dashboard.svg";
 import users from "../resources/images/users.svg";
 import history from "../resources/images/history.svg";
 import settingIcon from "../resources/images/setting.svg";
-
-
 
 export type SidebarLinkType = {
   title: string;
@@ -28,7 +26,7 @@ export const useMenuLinks = (): SidebarLinkType[] => {
       {
         title: "alert",
         icon: alertIcon,
-        to:"/alert"
+        to: "/alert",
       },
       {
         title: "Report",
@@ -45,7 +43,7 @@ export const useMenuLinks = (): SidebarLinkType[] => {
       {
         title: "Setting",
         icon: settingIcon,
-        to:"/setting"
+        to: "/setting",
       },
     ];
   }, []);
@@ -75,36 +73,32 @@ export const useAdminLinks = (): SidebarLinkType[] => {
       {
         title: "DASHBOARD",
         icon: dashboard,
-        to:"/dashboard"
+        to: "/dashboard",
       },
       {
         title: "USERS",
         icon: users,
-        to:"/user"
-
+        to: "/user",
       },
       {
         title: "ALERT TYPES",
         icon: alertIcon,
-        to:"/alert-type"
-
+        to: "/alert-type",
       },
       {
         title: "ALERT HISTORY",
         icon: history,
-        to:"/alert-history"
-
+        to: "/alert-history",
       },
       {
         title: "CHAT HISTORY",
         icon: chatIcon,
-        to:"/chat-history"
-
+        to: "/chat-history",
       },
       {
         title: "Setting",
         icon: settingIcon,
-        to:"/setting"
+        to: "/setting",
       },
     ];
   }, []);

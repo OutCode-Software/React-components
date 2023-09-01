@@ -6,15 +6,13 @@ interface cardProps {
   sx?: any;
   onClick?: () => void;
   active?: boolean;
-  description?: 
-    {
-      title?:string,
-      label?:string,
-    }[]
-  ;
+  description?: {
+    title?: string;
+    label?: string;
+  }[];
 }
 const CardComponent = (props: cardProps) => {
-  const { icon, title, sx, onClick, active = false, description } = props;
+  const { icon, title, sx, description } = props;
 
   return (
     <div className={styles.cardWrapper}>
@@ -34,7 +32,7 @@ const CardComponent = (props: cardProps) => {
       {description?.map((list, index) => {
         return (
           <div className={"w-full mt-1 grid lg:grid-cols-2 grid-cols-1"}>
-            <p className={"text-left leading-5" }>{list?.title}</p>
+            <p className={"text-left leading-5"}>{list?.title}</p>
             <p className={"lg:text-right text-left leading-5"}>{list?.label}</p>
           </div>
         );

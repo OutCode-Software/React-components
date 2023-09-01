@@ -1,8 +1,7 @@
-
 import React from "react";
 import { useSortBy, useTable } from "react-table";
 import { grk } from "../../helpers";
-import styles from "./table.module.scss"
+import styles from "./table.module.scss";
 //table data type, dyanmically generated from generic
 export type TDData<T> = {
   [Property in keyof T]: T[Property];
@@ -16,9 +15,10 @@ export type THeadType<T> = {
 
 export interface TableProps<T> {
   //table header key
-  thData:any;
+  thData: any;
   //table data
   tdData: any;
+  key?: keyof T;
 }
 
 //Component to create dynamic tables
@@ -37,7 +37,10 @@ function DynamicTable<T>(props: TableProps<T>) {
         <tr className="" {...headerGroup.getHeaderGroupProps()}>
           {headerGroup.headers.map((column, thIndex) => (
             <React.Fragment key={grk("th", thIndex)}>
-              <th className=" p-2 text-left" {...column.getHeaderProps(column.getSortByToggleProps())}>
+              <th
+                className=" p-2 text-left"
+                {...column.getHeaderProps(column.getSortByToggleProps())}
+              >
                 {column.render("h")}
               </th>
             </React.Fragment>
@@ -54,7 +57,11 @@ function DynamicTable<T>(props: TableProps<T>) {
       return (
         <tr className="" {...row.getRowProps()} key={grk("trtd", index)}>
           {row.cells.map((cell, tdIndex) => (
-            <td  className=" p-2 text-left" {...cell.getCellProps()} key={grk("td", tdIndex)}>
+            <td
+              className=" p-2 text-left"
+              {...cell.getCellProps()}
+              key={grk("td", tdIndex)}
+            >
               {cell.render("Cell")}
             </td>
           ))}
@@ -63,18 +70,19 @@ function DynamicTable<T>(props: TableProps<T>) {
     });
 
   return (
-    <div
- 
-      className={styles.table_wrapper}
-    >
-      <table className="w-full table-auto  " style={{color:"var(--black)"}} {...getTableProps()}>
-        <thead >{thDataRender()}</thead>
+    <div className={styles.table_wrapper}>
+      <table
+        className="w-full table-auto  "
+        style={{ color: "var(--black)" }}
+        {...getTableProps()}
+      >
+        <thead>{thDataRender()}</thead>
         <tbody {...getTableBodyProps}>
           {tdData?.length > 0 ? (
             tdDataRender()
           ) : (
             <tr>
-              <td colSpan={thData?.length} style={{textAlign:"center"}}>
+              <td colSpan={thData?.length} style={{ textAlign: "center" }}>
                 No Data found
               </td>
             </tr>
